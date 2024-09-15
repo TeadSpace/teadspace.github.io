@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Awaits</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&family=Lora:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet" class="class=playball-regular">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Side Menu with Light/Dark Mode -->
+    <aside class="side-menu">
+        <div class="menu-content">
+            <h3>Adventure Filters</h3>
+            <button onclick="filterAdventure('mountain')">Mountain Escapes</button>
+            <button onclick="filterAdventure('beach')">Beach Getaways</button>
+            <button onclick="filterAdventure('city')">City Breaks</button>
+            <button onclick="filterAdventure('cultural')">Cultural Experiences</button>
+
+            <h3>Quick Links</h3>
+            <button onclick="filterQLink('top-destinations')">Top Destinations</button>
+            <button onclick="filterQLink('travel-guides')">Travel Guides</button>
+            <button onclick="filterQLink('packing-tips')">Packing Tips</button>
+            
+            <!-- Light/Dark Toggle in Side Menu -->
+            <h3>Theme Mode</h3>
+            <div class="theme-toggle"></div>
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </aside>
+
+    <!-- Header -->
+    <header class="hero">
+        <nav class="navbar">
+            <h1 class="site-title">Adventure Awaits</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#adventures">Adventures</a></li>
+                <li><a href="#travel-tips">Travel Tips</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-bar">
+                <!-- Search Bar with Icon -->
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search...">
+                </div>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h2>Adventure Awaits, Ready to Explore?</h2>
+            <p>Discover hidden gems and unique adventures. Let’s make your next trip unforgettable.</p>
+            <button class="cta-btn" onclick="scrollToSection('quiz')">Find My Next Adventure</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Explorer Section -->
+        <section id="quiz" class="content-section">
+            <h3>What Kind of Explorer Are You?</h3>
+            <p>Travel isn’t one-size-fits-all. Some crave adrenaline, others seek relaxation. Tell us what kind of traveler you are, and we’ll tailor recommendations just for you.</p>
+            <p>Whether you're a thrill-seeker or someone looking for a peaceful retreat, we have customized itineraries for everyone. Your next adventure could be climbing a rugged mountain or lounging by a serene beach.</p>
+            <p>Share your preferences with us, and we’ll match you with destinations that align with your style, whether you're looking for an urban experience, cultural immersion, or nature-filled adventures.</p>
+        </section>
+
+        <!-- Adventures Section -->
+        <section id="adventures" class="content-section">
+            <h3>Your Perfect Getaway Awaits</h3>
+            <p>Based on your preferences, here are some destinations tailored just for you. Choose your path and start planning your next adventure!</p>
+            <div class="travel-card">
+                <img src="mountain.jpg" alt="Mountains">
+                <h4>Explore the Mountains</h4>
+                <p>Challenge yourself with breathtaking hikes and secluded retreats.</p>
+            </div>
+            <div class="travel-card">
+                <img src="beach.jpg" alt="Beaches">
+                <h4>Relax on a Beach</h4>
+                <p>Unwind with sun-soaked coastlines and crystal-clear waters.</p>
+            </div>
+            <div class="travel-card">
+                <img src="city.jpg" alt="City">
+                <h4>Discover Cityscapes</h4>
+                <p>Immerse yourself in the hustle and bustle of vibrant cities.</p>
+            </div>
+            <div class="travel-card">
+                <img src="culture.jpg" alt="Cultural Experiences">
+                <h4>Embrace Cultural Adventures</h4>
+                <p>Dive deep into the rich traditions and history of foreign lands.</p>
+            </div>
+        </section>
+
+        <!-- Travel Tips & Tricks Section -->
+        <section id="travel-tips" class="travel-tips">
+            <h3>Travel Tips & Inspiration</h3>
+            <p>Traveling is a thrilling <b><i>journey filled with excitement</i></b>, but it also requires a bit of planning to ensure things go smoothly. Whether you’re a seasoned globetrotter or a <b><i>first-time adventurer</i></b>, these tips will help you navigate the intricacies of travel with ease and inspiration.</p>
+            <br>
+            <div><p>From packing light to staying safe, here’s your ultimate guide to mastering the art of travel.</p></div>
+            <div class="travel-tips-card">
+                <h4>1. Pack Smart and Light: Mastering the Art of Minimalism</h4>
+                <p>Packing is an art, and like any masterpiece, simplicity is key. The secret to packing light lies in planning. Start by listing out the absolute essentials—clothing, toiletries, electronics, and travel documents. Then, take a hard look at what can be left behind. Aim for versatile pieces of clothing that can be mixed and matched into different outfits. A lightweight jacket, a pair of comfortable shoes, and neutral-toned clothing are often all you need to go from sightseeing to dining in style.</p>
+
+                <p><b>Pro Tip:</b> Roll your clothes instead of folding them to save space and avoid wrinkles. Also, invest in packing cubes to keep your suitcase organized and easily accessible.</p>
+            </div>
+                
+            <div class="travel-tips-card">
+                <h4>2. Travel Insurance is a Must: Protect Your Peace of Mind</h4>
+                <p>Always get travel insurance, especially for international travel.                    <p>You never know what could happen when you're halfway around the world. Travel insurance may feel like an extra cost, but it's a small price to pay for the peace of mind that comes with being covered in case of emergencies. Whether it’s a sudden illness, lost luggage, or unexpected trip cancellations, travel insurance ensures that the bumps in your journey don’t turn into financial roadblocks.</p>
+
+                <p><b>Pro Tip:</b> Look for policies that cover medical emergencies, trip delays, cancellations, and even adventurous activities if you plan on doing something daring like skiing or scuba diving.</p>
+            </div>
+
+            <div class="travel-tips-card">
+                <h4>3. Learn a Few Local Phrases: Unlock New Connectionss</h4>
+                <p>The beauty of travel lies in connecting with new cultures, and nothing bridges the gap like learning a few local phrases. A simple “hello” or “thank you” in the native language can open doors to meaningful conversations and enrich your travel experience. Locals often appreciate the effort and may offer you a deeper glimpse into their world. Plus, knowing basic phrases can come in handy when navigating new places, from ordering food to asking for directions.</p>
+
+                <p><b>Pro Tip:</b> Download language apps like Duolingo or Babbel to brush up on key phrases before you go. Even a small vocabulary can make a big impact!</p>
+            </div>
+
+            <div class="travel-tips-card">
+                <h4>4. Respect Local Cultures: Travel with an Open Heart</h4>
+                <p>Every destination has its own unique customs and traditions. As a traveler, it’s essential to approach these with respect and curiosity. Before you arrive, do a little research on the cultural norms of your destination. This could include knowing how to dress appropriately, understanding body language, or learning the etiquette for visiting sacred sites.</p>
+
+                <p>Remember, traveling is not just about seeing new places—it’s about engaging with them respectfully. By being mindful of local practices, you’re not only showing respect but also gaining a deeper appreciation for the culture you're exploring.</p>
+            </div>
+
+            <div class="travel-tips-card">
+                <h4>5. Stay Safe and Informed: Travel Smart</h4>
+                <p>Your safety is paramount when exploring unfamiliar territories. Stay updated on the current political, social, and health situation of your destination before and during your trip. In some countries, it’s advisable to register with your embassy, especially for longer stays or in places prone to natural disasters or political unrest. Always keep a list of local emergency numbers and the address of your country's embassy handy.</p>
+
+                <p><b>Pro Tip:</b> Sign up for travel advisories and alerts from official government websites, so you’re informed about potential risks in real-time. It’s always better to be over-prepared than caught off-guard.</p>
+            </div>
+
+            <div class="travel-tips-card">
+                <h4>6. Use a Packing App: Stay Organized and Stress-Free</h4>
+                <p>In the whirlwind of trip planning, it’s easy to forget something crucial. A packing app can be your best friend, ensuring that nothing is left behind. Many apps allow you to create customized lists based on your destination, duration of stay, and even the weather. They also help you keep track of shared items if you’re traveling with a group, making sure everyone’s on the same page (and packed!).</p>
+
+                <p><b>Pro Tip:</b> Apps like PackPoint or Travel List let you sync your lists across devices and with others, making packing as smooth as your vacation.</p>
+            </div>
+
+            <div class="travel-tips-card">
+                <h4>7. Backup Important Documents: Be Prepared for the Unexpected</h4>
+                <p>Losing your passport or travel documents is every traveler’s nightmare, but it doesn’t have to be a disaster if you’re prepared. Before you leave, make both physical and digital copies of your important documents. Store the physical copies in a separate location from the originals (such as in your hotel’s safe), and keep the digital versions saved securely in cloud storage for easy access anywhere.</p>
+
+                <p><b>Pro Tip:</b> Use an app like Google Drive or Dropbox to store scanned copies of your passport, visa, and insurance documents. This way, even if the worst happens, you have everything you need at your fingertips.</p>
+            </div>
+
+            <div class="travel-tips-card">
+                <h4>8. Inspiration for the Journey</h4>
+                <p>Every trip is a new story waiting to be written, a journey not just through places but through experiences, memories, and self-discovery. Whether you're gazing at a serene sunset over the Mediterranean or hiking through rugged landscapes in the Andes, the essence of travel lies in its ability to change us. Use these tips as your guide—not just for smooth travels but to dive deeper into the heart of each destination.</p>
+
+                <p>So, pack light, be respectful, stay informed, and most importantly—embrace the adventure that awaits. After all, travel is not just about the places you see, but the journey you take within yourself. Safe travels!</p>
+            </div>
+        </section>
+
+        <!-- Stories Section -->
+        <section id="stories" class="content-section">
+            <h3>Real Stories from Real Adventurers</h3>
+            <div class="story-card">
+                <img src="traveler1.jpg" alt="Traveler">
+                <p>"I never thought I'd be standing at the top of the world, but here I am." - Jess</p>
+            </div>
+            <div class="story-card">
+                <img src="traveler2.jpg" alt="Traveler">
+                <p>"From city streets to hidden trails, this trip was full of surprises." - Marcus</p>
+            </div>
+            <div class="story-card">
+                <img src="traveler3.jpg" alt="Traveler">
+                <p>"Camping under the stars with the sound of waves crashing—it was surreal!" - Alice</p>
+            </div>
+            <div class="story-card">
+                <img src="traveler4.jpg" alt="Traveler">
+                <p>"A blend of adventure and culture—this trip gave me the best of both worlds." - Raj</p>
+            </div>
+            <div class="story-card">
+                <img src="traveler5.jpg" alt="Traveler">
+                <p>"Learning local customs made my journey a much more immersive experience." - Tina</p>
+            </div>
+
+            <!-- Show more stories button -->
+            <button class="show-more-btn" onclick="showMoreStories()">Show More</button>
+
+            <!-- Hidden Stories -->
+            <div id="hiddenStories" class="hidden-stories">
+                <div class="story-card">
+                    <img src="traveler6.jpg" alt="Traveler">
+                    <p>"From trekking the Himalayas to cruising the rivers of Vietnam—it was a dream come true!" - Ethan</p>
+                </div>
+                <div class="story-card">
+                    <img src="traveler7.jpg" alt="Traveler">
+                    <p>"The food, the people, the landscapes—everything was just magical!" - Chloe</p>
+                </div>
+                <!-- Add more stories as needed -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <h3>Contact Us</h3>
+            <form id="contactForm">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+            
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+            
+                <label for="destination">Preferred Destination</label>
+                <select id="destination" name="destination" required>
+                    <option value="" disabled selected>Select a Destination</option>
+                    <option value="mountains">Mountains</option>
+                    <option value="beach">Beaches</option>
+                    <option value="city">City Escapes</option>
+                    <option value="culture">Cultural Experiences</option>
+                </select>
+            
+                <label for="country-from">Your Country</label>
+                <select id="country-from" name="country-from">
+                    <option value="" disabled selected>Select Your Country</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Åland Islands">Åland Islands</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="American Samoa">American Samoa</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Anguilla">Anguilla</option>
+                    <option value="Antarctica">Antarctica</option>
+                    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Aruba">Aruba</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Barbados">Barbados</option>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Belize">Belize</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Bermuda">Bermuda</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Bouvet Island">Bouvet Island</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                    <option value="Brunei Darussalam">Brunei Darussalam</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Burundi">Burundi</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Cape Verde">Cape Verde</option>
+                    <option value="Cayman Islands">Cayman Islands</option>
+                    <option value="Central African Republic">Central African Republic</option>
+                    <option value="Chad">Chad</option>
+                    <option value="Chile">Chile</option>
+                    <option value="China">China</option>
+                    <option value="Christmas Island">Christmas Island</option>
+                    <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Comoros">Comoros</option>
+                    <option value="Congo">Congo</option>
+                    <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+                    <option value="Cook Islands">Cook Islands</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Cote D'ivoire">Cote D'ivoire</option>
+                    <option value="Croatia">Croatia</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Cyprus">Cyprus</option>
+                    <option value="Czech Republic">Czech Republic</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Djibouti">Djibouti</option>
+                    <option value="Dominica">Dominica</option>
+                    <option value="Dominican Republic">Dominican Republic</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                    <option value="Eritrea">Eritrea</option>
+                    <option value="Estonia">Estonia</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                    <option value="Faroe Islands">Faroe Islands</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Finland">Finland</option>
+                    <option value="France">France</option>
+                    <option value="French Guiana">French Guiana</option>
+                    <option value="French Polynesia">French Polynesia</option>
+                    <option value="French Southern Territories">French Southern Territories</option>
+                    <option value="Gabon">Gabon</option>
+                    <option value="Gambia">Gambia</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Gibraltar">Gibraltar</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Greenland">Greenland</option>
+                    <option value="Grenada">Grenada</option>
+                    <option value="Guadeloupe">Guadeloupe</option>
+                    <option value="Guam">Guam</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Guernsey">Guernsey</option>
+                    <option value="Guinea">Guinea</option>
+                    <option value="Guinea-bissau">Guinea-bissau</option>
+                    <option value="Guyana">Guyana</option>
+                    <option value="Haiti">Haiti</option>
+                    <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                    <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="Hong Kong">Hong Kong</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Iceland">Iceland</option>
+                    <option value="India">India</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                    <option value="Iraq">Iraq</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Isle of Man">Isle of Man</option>
+                    <option value="Israel">Israel</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Jersey">Jersey</option>
+                    <option value="Jordan">Jordan</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Kiribati">Kiribati</option>
+                    <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                    <option value="Korea, Republic of">Korea, Republic of</option>
+                    <option value="Kuwait">Kuwait</option>
+                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                    <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Lebanon">Lebanon</option>
+                    <option value="Lesotho">Lesotho</option>
+                    <option value="Liberia">Liberia</option>
+                    <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                    <option value="Liechtenstein">Liechtenstein</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Luxembourg">Luxembourg</option>
+                    <option value="Macao">Macao</option>
+                    <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Mali">Mali</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Marshall Islands">Marshall Islands</option>
+                    <option value="Martinique">Martinique</option>
+                    <option value="Mauritania">Mauritania</option>
+                    <option value="Mauritius">Mauritius</option>
+                    <option value="Mayotte">Mayotte</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                    <option value="Moldova, Republic of">Moldova, Republic of</option>
+                    <option value="Monaco">Monaco</option>
+                    <option value="Mongolia">Mongolia</option>
+                    <option value="Montenegro">Montenegro</option>
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="Morocco">Morocco</option>
+                    <option value="Mozambique">Mozambique</option>
+                    <option value="Myanmar">Myanmar</option>
+                    <option value="Namibia">Namibia</option>
+                    <option value="Nauru">Nauru</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Netherlands Antilles">Netherlands Antilles</option>
+                    <option value="New Caledonia">New Caledonia</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Nicaragua">Nicaragua</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Niue">Niue</option>
+                    <option value="Norfolk Island">Norfolk Island</option>
+                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Oman">Oman</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Palau">Palau</option>
+                    <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                    <option value="Panama">Panama</option>
+                    <option value="Papua New Guinea">Papua New Guinea</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Pitcairn">Pitcairn</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Puerto Rico">Puerto Rico</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Reunion">Reunion</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Russian Federation">Russian Federation</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Saint Helena">Saint Helena</option>
+                    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                    <option value="Saint Lucia">Saint Lucia</option>
+                    <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                    <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                    <option value="Samoa">Samoa</option>
+                    <option value="San Marino">San Marino</option>
+                    <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Senegal">Senegal</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="Seychelles">Seychelles</option>
+                    <option value="Sierra Leone">Sierra Leone</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Slovakia">Slovakia</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="Solomon Islands">Solomon Islands</option>
+                    <option value="Somalia">Somalia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="Sudan">Sudan</option>
+                    <option value="Suriname">Suriname</option>
+                    <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                    <option value="Swaziland">Swaziland</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="Tajikistan">Tajikistan</option>
+                    <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Timor-leste">Timor-leste</option>
+                    <option value="Togo">Togo</option>
+                    <option value="Tokelau">Tokelau</option>
+                    <option value="Tonga">Tonga</option>
+                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Turkmenistan">Turkmenistan</option>
+                    <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                    <option value="Tuvalu">Tuvalu</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States">United States</option>
+                    <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Uzbekistan">Uzbekistan</option>
+                    <option value="Vanuatu">Vanuatu</option>
+                    <option value="Venezuela">Venezuela</option>
+                    <option value="Viet Nam">Viet Nam</option>
+                    <option value="Virgin Islands, British">Virgin Islands, British</option>
+                    <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                    <option value="Wallis and Futuna">Wallis and Futuna</option>
+                    <option value="Western Sahara">Western Sahara</option>
+                    <option value="Yemen">Yemen</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                </select>
+
+                <label for="country-to">Destination Country</label>
+                <select id="country-to" name="country-to">
+                    <option value="" disabled selected>Select Destination Country</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Åland Islands">Åland Islands</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="American Samoa">American Samoa</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Anguilla">Anguilla</option>
+                    <option value="Antarctica">Antarctica</option>
+                    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Aruba">Aruba</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Barbados">Barbados</option>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Belize">Belize</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Bermuda">Bermuda</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Bouvet Island">Bouvet Island</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                    <option value="Brunei Darussalam">Brunei Darussalam</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Burundi">Burundi</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Cape Verde">Cape Verde</option>
+                    <option value="Cayman Islands">Cayman Islands</option>
+                    <option value="Central African Republic">Central African Republic</option>
+                    <option value="Chad">Chad</option>
+                    <option value="Chile">Chile</option>
+                    <option value="China">China</option>
+                    <option value="Christmas Island">Christmas Island</option>
+                    <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Comoros">Comoros</option>
+                    <option value="Congo">Congo</option>
+                    <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+                    <option value="Cook Islands">Cook Islands</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Cote D'ivoire">Cote D'ivoire</option>
+                    <option value="Croatia">Croatia</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Cyprus">Cyprus</option>
+                    <option value="Czech Republic">Czech Republic</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Djibouti">Djibouti</option>
+                    <option value="Dominica">Dominica</option>
+                    <option value="Dominican Republic">Dominican Republic</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                    <option value="Eritrea">Eritrea</option>
+                    <option value="Estonia">Estonia</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                    <option value="Faroe Islands">Faroe Islands</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Finland">Finland</option>
+                    <option value="France">France</option>
+                    <option value="French Guiana">French Guiana</option>
+                    <option value="French Polynesia">French Polynesia</option>
+                    <option value="French Southern Territories">French Southern Territories</option>
+                    <option value="Gabon">Gabon</option>
+                    <option value="Gambia">Gambia</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Gibraltar">Gibraltar</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Greenland">Greenland</option>
+                    <option value="Grenada">Grenada</option>
+                    <option value="Guadeloupe">Guadeloupe</option>
+                    <option value="Guam">Guam</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Guernsey">Guernsey</option>
+                    <option value="Guinea">Guinea</option>
+                    <option value="Guinea-bissau">Guinea-bissau</option>
+                    <option value="Guyana">Guyana</option>
+                    <option value="Haiti">Haiti</option>
+                    <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                    <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="Hong Kong">Hong Kong</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Iceland">Iceland</option>
+                    <option value="India">India</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                    <option value="Iraq">Iraq</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Isle of Man">Isle of Man</option>
+                    <option value="Israel">Israel</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Jersey">Jersey</option>
+                    <option value="Jordan">Jordan</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Kiribati">Kiribati</option>
+                    <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                    <option value="Korea, Republic of">Korea, Republic of</option>
+                    <option value="Kuwait">Kuwait</option>
+                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                    <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Lebanon">Lebanon</option>
+                    <option value="Lesotho">Lesotho</option>
+                    <option value="Liberia">Liberia</option>
+                    <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                    <option value="Liechtenstein">Liechtenstein</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Luxembourg">Luxembourg</option>
+                    <option value="Macao">Macao</option>
+                    <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Mali">Mali</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Marshall Islands">Marshall Islands</option>
+                    <option value="Martinique">Martinique</option>
+                    <option value="Mauritania">Mauritania</option>
+                    <option value="Mauritius">Mauritius</option>
+                    <option value="Mayotte">Mayotte</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                    <option value="Moldova, Republic of">Moldova, Republic of</option>
+                    <option value="Monaco">Monaco</option>
+                    <option value="Mongolia">Mongolia</option>
+                    <option value="Montenegro">Montenegro</option>
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="Morocco">Morocco</option>
+                    <option value="Mozambique">Mozambique</option>
+                    <option value="Myanmar">Myanmar</option>
+                    <option value="Namibia">Namibia</option>
+                    <option value="Nauru">Nauru</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Netherlands Antilles">Netherlands Antilles</option>
+                    <option value="New Caledonia">New Caledonia</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Nicaragua">Nicaragua</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Niue">Niue</option>
+                    <option value="Norfolk Island">Norfolk Island</option>
+                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Oman">Oman</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Palau">Palau</option>
+                    <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                    <option value="Panama">Panama</option>
+                    <option value="Papua New Guinea">Papua New Guinea</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Pitcairn">Pitcairn</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Puerto Rico">Puerto Rico</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Reunion">Reunion</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Russian Federation">Russian Federation</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Saint Helena">Saint Helena</option>
+                    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                    <option value="Saint Lucia">Saint Lucia</option>
+                    <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                    <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                    <option value="Samoa">Samoa</option>
+                    <option value="San Marino">San Marino</option>
+                    <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Senegal">Senegal</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="Seychelles">Seychelles</option>
+                    <option value="Sierra Leone">Sierra Leone</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Slovakia">Slovakia</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="Solomon Islands">Solomon Islands</option>
+                    <option value="Somalia">Somalia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="Sudan">Sudan</option>
+                    <option value="Suriname">Suriname</option>
+                    <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                    <option value="Swaziland">Swaziland</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="Tajikistan">Tajikistan</option>
+                    <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Timor-leste">Timor-leste</option>
+                    <option value="Togo">Togo</option>
+                    <option value="Tokelau">Tokelau</option>
+                    <option value="Tonga">Tonga</option>
+                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Turkmenistan">Turkmenistan</option>
+                    <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                    <option value="Tuvalu">Tuvalu</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States">United States</option>
+                    <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Uzbekistan">Uzbekistan</option>
+                    <option value="Vanuatu">Vanuatu</option>
+                    <option value="Venezuela">Venezuela</option>
+                    <option value="Viet Nam">Viet Nam</option>
+                    <option value="Virgin Islands, British">Virgin Islands, British</option>
+                    <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                    <option value="Wallis and Futuna">Wallis and Futuna</option>
+                    <option value="Western Sahara">Western Sahara</option>
+                    <option value="Yemen">Yemen</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                </select>
+                
+                <label for="start-date">Preferred Travel Start Date</label>
+                <input type="date" id="start-date" name="start-date">
+                
+                <label for="end-date">Preferred Travel End Date</label>
+                <input type="date" id="end-date" name="end-date">
+                
+                <label for="flexible">Are your dates flexible?</label>
+                <input type="checkbox" id="flexible" name="flexible">
+                
+                <label for="hear-about">How Did You Hear About Us?</label>
+                <select id="hear-about" name="hear-about">
+                    <option value="" disabled selected>Select an Option</option>
+                    <option value="social">Social Media</option>
+                    <option value="friends">Friends/Family</option>
+                    <option value="ads">Online Ads</option>
+                    <option value="other">Other</option>
+                </select>
+            
+                <label for="message">Additional Comments</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us more about your ideal trip"></textarea>
+            
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">TikTok</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 Adventure Awaits. All rights reserved. This website and its content are the intellectual property of Adventure Awaits Travel Agency. Unauthorized use and/or duplication of this material without express and written permission from this site’s owner is strictly prohibited.</p>
+    </footer>
+</body>
+</html>
+
+
+hero-bg = id=26
+mountain - id=177
+mountain2 - id=29
+beach - id=27
+city - id=43
+culture - id=308
+
+traveler1 - id=49
+traveler2 - id=50
+traveler3 - id=129
+traveler4 - id=190
+traveler5 - id=328
+traveler6 - id=395
+traveler7 - id=420
+traveler8 - id=
+traveler9 - id=
